@@ -114,7 +114,8 @@ function checkBookingForm(event) {
     if (date === "") {
         showError("date", "Please pick a date.");
         isValid = false;
-    } else if (date < getToday()) {
+    } 
+    else if (date < getToday()) {
         showError("date", "The date can't be in the past.");
         isValid = false;
     }
@@ -122,7 +123,8 @@ function checkBookingForm(event) {
     if (time === "") {
         showError("time", "Please pick a start time.");
         isValid = false;
-    } else if (time < "07:00" || time > "21:00") {
+    } 
+    else if (time < "07:00" || time > "21:00") {
         showError("time", "Bookings are from 7:00 AM to 9:00 PM.");
         isValid = false;
     }
@@ -130,7 +132,8 @@ function checkBookingForm(event) {
     if (headcount < 1) {
         showError("headcount", "Enter how many people (at least 1).");
         isValid = false;
-    } else if (room !== "" && headcount > roomCapacity[room]) {
+    } 
+    else if (room !== "" && headcount > roomCapacity[room]) {
         showError("headcount", room + " holds up to " + roomCapacity[room] + " people.");
         isValid = false;
     }

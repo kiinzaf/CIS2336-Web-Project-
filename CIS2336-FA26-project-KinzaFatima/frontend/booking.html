@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | UH Sugar Land Student Center</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="topnav" id="main-nav"></nav>
+    </header>
+
+
+    <main class="page booking-page">
+        <header class="booking-intro">
+            <p class="booking-kicker">UH SUGAR LAND STUDENT CENTER</p>
+            <h1>Room Booking</h1>
+            <p>Request a quiet study space or reserve a room for your club event. Complete the details below to get started.</p>
+        </header>
+
+        <section class="booking-card" aria-label="Room booking request">
+            <form id="booking-form" class="booking-form" novalidate>
+                <fieldset class="booking-types">
+                    <legend>What are you booking?</legend>
+                    <div class="booking-type-options">
+                        <label class="booking-type">
+                            <input type="radio" name="type" value="study" checked>
+                            <span>Study room</span>
+                        </label>
+                        <label class="booking-type">
+                            <input type="radio" name="type" value="club">
+                            <span>Club or event</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="booking-fields">
+                    <div class="booking-field">
+                        <label for="room">Room <span class="required-mark" aria-hidden="true">*</span></label>
+                        <select id="room" name="room" required>
+                            <option value="">Choose a room</option>
+                            <option value="Study Room 101">Study Room 101 (up to 4)</option>
+                            <option value="Study Room 102">Study Room 102 (up to 4)</option>
+                            <option value="Study Room 103">Study Room 103 (up to 6)</option>
+                            <option value="Game Room">Game Room (up to 20)</option>
+                            <option value="Multipurpose Hall">Multipurpose Hall (up to 50)</option>
+                        </select>
+                        <span class="error" id="room-error"></span>
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="fullname">Full name <span class="required-mark" aria-hidden="true">*</span></label>
+                        <input type="text" id="fullname" name="name" autocomplete="name" required>
+                        <span class="error" id="fullname-error"></span>
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="email">Email <span class="required-mark" aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                        <span class="error" id="email-error"></span>
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="club">Club or organization <span>(club events only)</span></label>
+                        <input type="text" id="club" name="club">
+                        <span class="error" id="club-error"></span>
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="date">Date <span class="required-mark" aria-hidden="true">*</span></label>
+                        <input type="date" id="date" name="date" required>
+                        <span class="error" id="date-error"></span>
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="time">Start time <span class="required-mark" aria-hidden="true">*</span></label>
+                        <input type="time" id="time" name="time" required>
+                        <span class="error" id="time-error"></span>
+                    </div>
+
+                    <div class="booking-field">
+                        <label for="headcount">Number of people <span class="required-mark" aria-hidden="true">*</span></label>
+                        <input type="number" id="headcount" name="headcount" min="1" max="50" required>
+                        <span class="error" id="headcount-error"></span>
+                    </div>
+                </div>
+
+                <div class="booking-actions">
+                    <p><span class="required-mark" aria-hidden="true">*</span> Required fields</p>
+                    <button type="submit">Submit request</button>
+                </div>
+            </form>
+            <p id="booking-result" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us at sugarlandstudentcenter@cougarnet.uh.edu</p>
+        <p>University of Houston at Sugar Land</p>
+    </footer>
+</body>
+</html>

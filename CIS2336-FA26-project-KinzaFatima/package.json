@@ -1,0 +1,17 @@
+{
+  "name": "cis2336-fa26-project-kinzafatima",
+  "version": "1.0.0",
+  "description": "```text project-folder/ ├── frontend/ │   ├── index.html  (Homepage)     ├── FAQ.html     ├── roombooking.html     ├── reference.html │   └── script.js ├── backend/ │   └── app.js ├── package.json └── README.md ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.3.0",
+    "path": "^0.12.7"
+  }
+}
